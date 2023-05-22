@@ -38,3 +38,27 @@ class UserInterface:
     #Creating an area to show the results
         self.result_label = tk.Label(self.root, text="RESULT:")
         self.result_label.grid(row=4, column=0, columnspan=2)
+
+        self.root.mainloop() 
+
+    #Defining the function buttons to calculate with the choosen operation
+    def calculate(self):
+        try:
+            num1 = float(self.num1_entry.get())
+            num2 = float(self.num2_entry.get())
+            operation = self.operation_var.get()
+
+            if operation == "ADD":
+                result = self.calculator.add(num1, num2)
+            elif operation == "SUBTRACT":
+                result = self.calculator.subtract(num1, num2)
+            elif operation == "MULTIPLY":
+                result = self.calculator.multiply(num1, num2)
+            elif operation == "DIVIDE":
+                result = self.calculator.divide(num1, num2)
+
+            self.result_label.config(text=result)
+        except ValueError:
+            self.result_label.config(text="Invalid input, please try again")
+        except ZeroDivisionError as e:
+            self.result_label.config(text=str(e))    
