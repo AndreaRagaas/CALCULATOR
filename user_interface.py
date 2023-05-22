@@ -3,3 +3,7 @@
 
 #Creating the class
 class UserInterface:
+    #Defining the User Interface attributions
+    def __init__(self, calculator):
+        self.calculator = calculator
+        self.create_window() 
