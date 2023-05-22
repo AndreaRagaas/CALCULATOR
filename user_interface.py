@@ -34,3 +34,7 @@ class UserInterface:
     #Creating a button to calculate the users input
         self.calculate_button = tk.Button(self.root, text="CALCULATE", command=self.calculate)
         self.calculate_button.grid(row=3, column=0, columnspan=2, pady=5)
+
+    #Creating an area to show the results
+        self.result_label = tk.Label(self.root, text="RESULT:")
+        self.result_label.grid(row=4, column=0, columnspan=2)
