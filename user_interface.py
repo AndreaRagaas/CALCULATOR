@@ -10,3 +10,8 @@ class UserInterface:
     def __init__(self, calculator):
         self.calculator = calculator
         self.create_window() 
+
+    #Designing the calculators interface
+    def create_window(self):
+        self.root = tk.Tk()
+        self.root.title("SIMPLE CALCULATOR")
