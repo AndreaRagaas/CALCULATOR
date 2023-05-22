@@ -4,6 +4,9 @@
 #Importing tkinter to design the calculator
 import tkinter as tk
 
+#Importing the class to ask the user if still wanted to do more calculations
+from ask_again import AskAgain
+
 #Creating the class
 class UserInterface:
     #Defining the User Interface attributions
