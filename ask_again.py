@@ -2,3 +2,6 @@
 
 #Importing a messagebox to ask the user
 from tkinter import messagebox
+
+#Creating the class
+class AskAgain:
