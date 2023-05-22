@@ -2,3 +2,4 @@
 
 #Creating the class
 class Calculator:
+    #Defining the function of each operations
