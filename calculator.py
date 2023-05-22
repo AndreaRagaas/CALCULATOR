@@ -14,3 +14,10 @@ class Calculator:
     #To Multiply
     def multiply(self, num1, num2):
         return ("PRODUCT: " + str(num1 * num2))
+    
+    #To Divide
+    def divide(self, num1, num2):
+        if num2 != 0:
+            return ("QUOTIENT: " + str(num1 / num2))
+        else:
+            raise ZeroDivisionError("Cannot divide by zero")
