@@ -5,3 +5,9 @@ from tkinter import messagebox
 
 #Creating the class
 class AskAgain:
+    #Defining the ask again's attributions
+    def __init__(self, root, result_label, num1_entry, num2_entry):
+        self.root = root
+        self.result_label = result_label
+        self.num1_entry = num1_entry
+        self.num2_entry = num2_entry
