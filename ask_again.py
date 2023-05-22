@@ -15,3 +15,8 @@ class AskAgain:
     #Defining messagebox to ask the user
     def ask(self):
         answer = messagebox.askquestion("ANOTHER CALCULATION", "Do you want to perform another calculation?")     
+        #If the user wants to perform another calculation
+        if answer == "yes":
+                self.result_label.config(text="Result:")
+                self.num1_entry.delete(0, "end")
+                self.num2_entry.delete(0, "end")
