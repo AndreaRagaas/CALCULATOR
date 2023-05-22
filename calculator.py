@@ -6,3 +6,7 @@ class Calculator:
     #To Add
     def add(self, num1, num2):
         return ("SUM: " + str(num1 + num2))
+    
+    #To Subtract
+    def subtract(self, num1, num2):
+        return ("DIFFERENCE: " + str(num1 - num2))
