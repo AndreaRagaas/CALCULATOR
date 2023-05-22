@@ -30,3 +30,7 @@ class UserInterface:
         self.operation_var = tk.StringVar(value="CHOOSE AN OPERATION")
         self.operation_dropdown = tk.OptionMenu(self.root, self.operation_var, "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE")
         self.operation_dropdown.grid(row=2, column=0, columnspan=2, pady=5)
+
+    #Creating a button to calculate the users input
+        self.calculate_button = tk.Button(self.root, text="CALCULATE", command=self.calculate)
+        self.calculate_button.grid(row=3, column=0, columnspan=2, pady=5)
