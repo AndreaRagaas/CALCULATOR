@@ -10,3 +10,7 @@ class Calculator:
     #To Subtract
     def subtract(self, num1, num2):
         return ("DIFFERENCE: " + str(num1 - num2))
+    
+    #To Multiply
+    def multiply(self, num1, num2):
+        return ("PRODUCT: " + str(num1 * num2))
