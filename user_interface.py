@@ -42,6 +42,9 @@ class UserInterface:
         self.result_label = tk.Label(self.root, text="RESULT:")
         self.result_label.grid(row=4, column=0, columnspan=2)
 
+        #To ask the user
+        self.ask_again = AskAgain(self.root, self.result_label, self.num1_entry, self.num2_entry)
+
         self.root.mainloop() 
 
     #Defining the function buttons to calculate with the choosen operation
@@ -66,3 +69,6 @@ class UserInterface:
             self.result_label.config(text="Invalid input, please try again")
         except ZeroDivisionError as e:
             self.result_label.config(text=str(e))    
+
+        #To ask the user
+        self.ask_again.ask()
