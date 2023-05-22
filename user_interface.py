@@ -57,6 +57,7 @@ class UserInterface:
             elif operation == "DIVIDE":
                 result = self.calculator.divide(num1, num2)
 
+        #For any errors that will be detected
             self.result_label.config(text=result)
         except ValueError:
             self.result_label.config(text="Invalid input, please try again")
