@@ -20,8 +20,13 @@ class UserInterface:
         self.num1_label = tk.Label(self.root, text="ENTER THE FIRST NUMBER: ")
         self.num1_entry = tk.Entry(self.root)
         self.num2_label = tk.Label(self.root, text="ENTER THE SECOND NUMBER: ")
-        self.num2_entry = tk.Entry(self.root)
+        self.num2_entry = tk.Entry(self.root) 
         self.num1_label.grid(row=0, column=0, sticky="e")
         self.num1_entry.grid(row=0, column=1)
         self.num2_label.grid(row=1, column=0, sticky="e")
-        self.num2_entry.grid(row=1, column=1)         
+        self.num2_entry.grid(row=1, column=1)
+
+    #Creating an area for the user to choose an operation
+        self.operation_var = tk.StringVar(value="CHOOSE AN OPERATION")
+        self.operation_dropdown = tk.OptionMenu(self.root, self.operation_var, "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE")
+        self.operation_dropdown.grid(row=2, column=0, columnspan=2, pady=5)
