@@ -22,6 +22,16 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         self.root = tk.Tk()
         self.root.title("IMPROVED CALCULATOR")
 
+        # Creating an area for the user to enter numbers
+        self.num1_label = tk.Label(self.root, text="ENTER THE FIRST NUMBER:")
+        self.num1_entry = tk.Entry(self.root)
+        self.num2_label = tk.Label(self.root, text="ENTER THE SECOND NUMBER:")
+        self.num2_entry = tk.Entry(self.root)
+        self.num1_label.grid(row=0, column=0, sticky="e")
+        self.num1_entry.grid(row=0, column=1)
+        self.num2_label.grid(row=1, column=0, sticky="e")
+        self.num2_entry.grid(row=1, column=1)
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
