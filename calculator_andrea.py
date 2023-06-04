@@ -91,6 +91,32 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
 
         self.ask_again.ask()
         
+    # The additional features/operations
+    def additional_operations(self):
+        try:
+            num3 = float(self.new_entry_entry.get())
+            operation = self.operation_var.get()
+
+            if operation == "SQUARE":
+                result = self.square(num3)
+            elif operation == "SQUARE ROOT":
+                result = self.square_root(num3)
+
+            self.result_label.config(text=result)
+        except ValueError:
+            self.result_label.config(text="Invalid input, please try again")
+
+    # For the Square Root
+    def square_root(self, num3):
+        if num3 >= 0:
+            return "SQUARE ROOT: " + str(sqrt(num3))
+        else:
+            return "Invalid input, cannot calculate the square root of a negative number"
+
+    # For the Square
+    def square(self, num3):
+        return "SQUARE: " + str(num3 * num3)
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
