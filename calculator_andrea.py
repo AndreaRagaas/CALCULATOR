@@ -57,6 +57,11 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         self.additional_ops_button1 = tk.Button(self.root, text="CALCULATE FOR THE SQUAREROOT", command=self.additional_operations)
         self.additional_ops_button1.grid(row=7, column=0, columnspan=2, pady=5)
 
+        # To ask the user
+        self.ask_again = AskAgain(self.root, self.result_label, self.num1_entry, self.num2_entry)
+
+        self.root.mainloop()
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
