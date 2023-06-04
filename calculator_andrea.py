@@ -32,6 +32,12 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         self.num2_label.grid(row=1, column=0, sticky="e")
         self.num2_entry.grid(row=1, column=1)
 
+        # Creating an area for the user to choose an operation
+        self.operation_var = tk.StringVar(value="CHOOSE AN OPERATION")
+        self.operation_dropdown = tk.OptionMenu(self.root, self.operation_var, "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "SQUARE", "SQUARE ROOT")
+        self.operation_dropdown.grid(row=2, column=0, columnspan=2, pady=5)
+
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
