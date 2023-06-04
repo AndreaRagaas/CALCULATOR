@@ -17,6 +17,12 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         Calculator.__init__(self)
         UserInterface.__init__(self, self)
 
+    def create_window(self):
+        # Creating and enhancing the calculator window
+        self.root = tk.Tk()
+        self.root.title("IMPROVED CALCULATOR")
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
+    calculator_andrea.create_window()
