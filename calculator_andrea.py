@@ -51,6 +51,12 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         self.new_entry_label.grid(row=2, column=0, sticky="e")
         self.new_entry_entry.grid(row=2, column=1)
 
+        # Creating buttons to perform additional operations
+        self.additional_ops_button = tk.Button(self.root, text="CALCULATE FOR THE SQUARE", command=self.additional_operations)
+        self.additional_ops_button.grid(row=6, column=0, columnspan=2, pady=5)
+        self.additional_ops_button1 = tk.Button(self.root, text="CALCULATE FOR THE SQUAREROOT", command=self.additional_operations)
+        self.additional_ops_button1.grid(row=7, column=0, columnspan=2, pady=5)
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
