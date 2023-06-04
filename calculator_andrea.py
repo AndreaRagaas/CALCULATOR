@@ -62,6 +62,35 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
 
         self.root.mainloop()
 
+    #Defining the function buttons to calculate with the choosen operation
+    def calculate(self):
+        try:
+            num1 = float(self.num1_entry.get())
+            num2 = float(self.num2_entry.get())
+            num3 = float(self.new_entry_entry.get())
+            operation = self.operation_var.get()
+
+            if operation == "ADD":
+                result = self.add(num1, num2)
+            elif operation == "SUBTRACT":
+                result = self.subtract(num1, num2)
+            elif operation == "MULTIPLY":
+                result = self.multiply(num1, num2)
+            elif operation == "DIVIDE":
+                result = self.divide(num1, num2)
+            elif operation == "SQUARE":
+                result = self.square(num3)
+            elif operation == "SQUARE ROOT":
+                result = self.square_root(num3)
+
+            self.result_label.config(text=result)
+        except ValueError:
+            self.result_label.config(text="Invalid input, please try again")
+        except ZeroDivisionError as e:
+            self.result_label.config(text=str(e))
+
+        self.ask_again.ask()
+        
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
