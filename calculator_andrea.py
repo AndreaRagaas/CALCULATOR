@@ -45,6 +45,12 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         self.result_label = tk.Label(self.root, text="RESULT:")
         self.result_label.grid(row=8, column=0, columnspan=2)
 
+        # Creating an entry section for the numbers that the user wanted to get the square or the squareroot 
+        self.new_entry_label = tk.Label(self.root, text="ENTER A NUMBER TO GET THE SQUARE/ SQUAREROOT:")
+        self.new_entry_entry = tk.Entry(self.root)
+        self.new_entry_label.grid(row=2, column=0, sticky="e")
+        self.new_entry_entry.grid(row=2, column=1)
+
 # Running the program
 if __name__ == "__main__":
     calculator_andrea = Andrea_Improved_Calculator()
