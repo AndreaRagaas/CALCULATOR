@@ -12,7 +12,10 @@ import tkinter as tk
 
 # Creating the new class Andrea Improved Calculator
 class Andrea_Improved_Calculator(Calculator, UserInterface):
-    pass
+    def __init__(self):
+        # Initializing parent classes
+        Calculator.__init__(self)
+        UserInterface.__init__(self, self)
 
 # Running the program
 if __name__ == "__main__":
