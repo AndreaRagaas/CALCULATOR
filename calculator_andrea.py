@@ -9,3 +9,11 @@ from user_interface import UserInterface, AskAgain
 from math import sqrt
 # Importing tkinter for the upgraded design of the calculator
 import tkinter as tk
+
+# Creating the new class Andrea Improved Calculator
+class Andrea_Improved_Calculator(Calculator, UserInterface):
+    pass
+
+# Running the program
+if __name__ == "__main__":
+    calculator_andrea = Andrea_Improved_Calculator()
