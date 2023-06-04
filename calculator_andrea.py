@@ -35,11 +35,15 @@ class Andrea_Improved_Calculator(Calculator, UserInterface):
         # Creating an area for the user to choose an operation
         self.operation_var = tk.StringVar(value="CHOOSE AN OPERATION")
         self.operation_dropdown = tk.OptionMenu(self.root, self.operation_var, "ADD", "SUBTRACT", "MULTIPLY", "DIVIDE", "SQUARE", "SQUARE ROOT")
-        self.operation_dropdown.grid(row=2, column=0, columnspan=2, pady=5)
+        self.operation_dropdown.grid(row=4, column=0, columnspan=2, pady=5)
 
         # Creating a button to calculate the user's input
-        self.calculate_button = tk.Button(self.root, text="CALCULATE", command=self.calculate)
-        self.calculate_button.grid(row=3, column=0, columnspan=2, pady=5)
+        self.calculate_button = tk.Button(self.root, text="CALCULATE THE SUM/ DIFFERENCE/ PRODUCT/ QUOTIENT", command=self.calculate)
+        self.calculate_button.grid(row=5, column=0, columnspan=2, pady=5)
+
+        # Creating an area to show the results
+        self.result_label = tk.Label(self.root, text="RESULT:")
+        self.result_label.grid(row=8, column=0, columnspan=2)
 
 # Running the program
 if __name__ == "__main__":
